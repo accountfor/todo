@@ -111,3 +111,13 @@ footer p {
     position: relative;
 }
 
+/*  messages  */
+
+
+ul.messages {
+    padding: 0;
+}
+
+ul.messages li {
+    list-style: none;
+}
