@@ -20,7 +20,7 @@ def taskList(request):
 
         tasks_list = Task.objects.all().order_by('-created_at')
 
-        paginator = Paginator(tasks_list, 5)
+        paginator = Paginator(tasks_list, 8)
         
         page = request.GET.get('page')
         

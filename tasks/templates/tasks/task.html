@@ -5,8 +5,13 @@
 
 {% block content %}
 <div class="offset-1 col-10 list-div">
-    <h1>{{task.title}}</h1>
-    <p>{{task.description}}</p>
+    <h1 class="task-title">Title: {{task.title}}</h1>
+    <h5 class="task-description">Description: </h5>
+    <h5 class="task-content"><p>{{task.description}}</p></h3>
+    <button id="btn-change" type="button" class="btn btn-success" onclick="{window.location.href='http://192.168.1.8:8000/'}">Voltar</button>
+    <a href="../delete/{{task.id}}" class="delete-btn"><span><i class="fas fa-trash"></i></span></a>
+    <a href="../edit/{{task.id}}"><span><i class="fas fa-edit"></i></span></a>
+
 </div>
 
 {% endblock %}

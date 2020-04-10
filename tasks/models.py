@@ -7,7 +7,7 @@ class Task(models.Model):
         ('done','Done'),
     )
 
-    title = models.CharField(max_length=255,)
+    title = models.CharField(max_length=60,)
     description = models.TextField()
     done = models.CharField(
         max_length=5, 
