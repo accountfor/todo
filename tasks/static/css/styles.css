@@ -326,3 +326,35 @@ ul.messages li {
     border: 1px solid #e0ac1c;
     box-shadow: none;
 }
+
+/*    Login     */
+
+.auth-card {
+    margin-bottom: 30px;
+    background-color: #333333;
+    color: #fff;
+}
+
+#login-div {
+    
+    margin-top: 110px; 
+    
+}
+
+.card-title{
+    font-size: 25px;
+    align-items: center; 
+    
+}
+#login-btn {
+    background-color: #fff;
+    width: 50%;
+    color: #33383b;
+    font-weight: bold;
+    margin-left: 25%;
+
+}
+
+#login-btn:hover, #login-btn:focus{
+    background-color: #e0ac1c;
+}
