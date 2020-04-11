@@ -11,7 +11,7 @@
         {% csrf_token %}
         {{ form|crispy }}
         <input  id="btn-change" type="submit" value="Criar tarefa" class="btn btn-success">
-        <button id="btn-change"  type="button" class="btn btn-success" onclick="{window.location.href='http://192.168.1.8:8000/'}">Voltar</button>
+        <button id="btn-change"  type="button" class="btn btn-success" onclick="{window.location.href='http://'+ window.location.host +'/'}">Voltar</button>
     </form>   
 </div>
 

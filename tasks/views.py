@@ -11,10 +11,24 @@ from .models import Task
 @login_required
 def taskList(request):
     search = request.GET.get('search')
+    filter = request.GET.get('filter')
 
     if search:
 
         tasks = Task.objects.filter(title__icontains=search, user=request.user)
+        
+    elif filter:
+        print(filter)
+        if filter == 'all':
+            tasks_list = Task.objects.all().order_by('-created_at').filter(user=request.user)
+            paginator = Paginator(tasks_list, 8)
+
+            page = request.GET.get('page')
+
+            tasks = paginator.get_page(page)
+        else:
+            tasks = Task.objects.filter(done=filter, user=request.user)
+
         
     else:
 
@@ -75,3 +89,30 @@ def deleteTask(request, id):
 
     messages.info(request, 'Tarefa deletada com sucesso!')
     return redirect('/',{'del': True})
+
+@login_required
+def changeStatus(request, id):
+    task = get_object_or_404(Task, pk=id)
+
+    if(task.done == 'doing'):
+        task.done = 'done'
+    else:
+        task.done = 'doing'
+    
+    task.save()
+
+    return redirect('/')
+
+@login_required
+def changeStatusTask(request, id):
+    task = get_object_or_404(Task, pk=id)
+
+    if(task.done == 'doing'):
+        task.done = 'done'
+        messages.info(request, 'Tarefa finalizada!')
+    else:
+        task.done = 'doing'
+    
+    task.save()
+    
+    return redirect('/task/'+ str(id))
