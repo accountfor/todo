@@ -5,12 +5,12 @@
 
 
 {% block content %}
-<div class="rl-md-4 offset-md-0" id="login-div">
-    <div class="col-md-4 offset-md-4">
-        <div class="card auth-card">
+<div class="rl-md-4 offset-md-0" id="register-div">
+    <div class="col-md-4 offset-md-4" id="register-col">
+        <div class="card auth-card" id="register-card">
             <div class="card-body">
                 <h4 class="card-title text-center">
-                    ToDo-Dudu list
+                    Registrar-se
                 </h4>
 
                 <form method="POST">
@@ -19,14 +19,14 @@
 
                     {{form|crispy}}
 
-                    <button type="submit" class="btn btn-primary btn-block" id="login-btn">Entrar</button>
+                    <button type="submit" class="btn btn-primary btn-block" id="register-btn">Registrar</button>
                 </form>
-                
             </div>
-            
         </div>
-        <p class="change-form-p" id="link">Não possui uma conta? <a href="/accounts/register">Crie agora</a></p>
+        <p class="change-form-p" id="link">Já possui uma conta? <a href="/accounts/login">Entre agora</a></p>
     </div>
+    
 </div>
+
 
 {% endblock %}

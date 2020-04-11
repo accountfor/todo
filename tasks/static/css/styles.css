@@ -1,5 +1,6 @@
 .container-fluid {
     padding: 0;
+    margin: 0;
     
 }
 
@@ -13,6 +14,7 @@
 }
 .collapse {
     background-color: #33383b;
+    margin-right: 180px;
 }
 .navbar-toggler{
     background-color: #e0ac1c ;
@@ -343,7 +345,8 @@ ul.messages li {
 
 .card-title{
     font-size: 25px;
-    align-items: center; 
+    align-items: center;
+    margin-bottom: 40px;
     
 }
 #login-btn {
@@ -355,6 +358,47 @@ ul.messages li {
 
 }
 
-#login-btn:hover, #login-btn:focus{
+#login-btn:hover{
     background-color: #e0ac1c;
+}
+
+
+/*    Cadastro     */
+
+
+#register-card {
+    margin-bottom: 30px;
+    background-color: #333333;
+    color: #fff;
+}
+
+#register-div {
+    margin-top: 50px; 
+    
+}
+
+#register-btn {
+    background-color: #fff;
+    width: 50%;
+    color: #33383b;
+    font-weight: bold;
+    margin-left: 25%;
+
+}
+
+#register-btn:hover{
+    background-color: #e0ac1c;
+}
+
+
+.change-form-p{
+    margin-top: 30px;
+    text-align: center;
+}
+
+
+#link a{
+    color: #e0ac1c ;
+    font-weight: bold;
+    text-decoration: none;
 }
